@@ -1,3 +1,5 @@
+k,n = map(int,input().split(" "))
+
 def SuperSum(k,n):
     sum = 0
     if k != 0:
@@ -6,13 +8,6 @@ def SuperSum(k,n):
         return sum
     elif k == 0:
         return n
-
-
-while True:
-    k,n = map(int,input().split(" "))
-    
-
-
 
 
 print(SuperSum(k,n))
