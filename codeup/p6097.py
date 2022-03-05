@@ -35,6 +35,7 @@ arg = made_graph(h,w)
 for i in range(0,n):
     result_arg = put_the_stick(arg, sticks[i])
 
+# 출력하기
 for i in range(len(result_arg)):            # 세로 크기
     for j in range(len(result_arg[i])):     # 가로 크기
         print(result_arg[i][j], end=' ')
