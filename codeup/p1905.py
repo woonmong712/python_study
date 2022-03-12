@@ -1,12 +1,10 @@
-n = int(input())
-total_result = 0
+import sys
 
-def total_sum(n,total_result):
-    total_result += n
-    if n > 0:
-        total_sum(n-1,total_result)
+sys.setrecursionlimit(10**5)
 
+def total_sum(n):
+    if n <= 1:
+        return 1
+    return total_sum(n-1) + n
 
-total_result = total_sum(n,total_result)
-
-print(total_result)
+print(total_sum(int(input())))
