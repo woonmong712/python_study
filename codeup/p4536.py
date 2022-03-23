@@ -23,5 +23,4 @@ def max_Cnt(numArr):
 
     print(dict)
 
-
 print(max_Cnt(numArr))
