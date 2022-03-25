@@ -1,26 +1,23 @@
 numArr = []
 
 for i in range(10):
-    numArr.append(int(input()))
-
-print(numArr)
+    numArr.append(input())
 
 def Average_Num(numArr):
     sum = 0
     for i in range(len(numArr)):
-        sum += numArr[i]
+        sum += int(numArr[i])
     return int(sum/len(numArr))
 
 def max_Cnt(numArr):
+    cnt = 0
     dict = {numArr[i]: 0 for i in range(0, len(numArr))}
-    for i in range(0,len(numArr)-1):
-        # if i == len(numArr)-1:
-        #     print(dict)
-        if numArr[i] != numArr[i+1]:
-            print(f"numArr[i] = {numArr[i]} , numArr[i+1] = {numArr[i+1]}")
+    numArr2 = numArr
+    for i in range(len(numArr)):
+        for j in numArr2:
             cnt += 1
-            dict[numArr[i]] = cnt
-
-    print(dict)
-
+        
+    return dict
+    # print(dict)
+print(Average_Num(numArr))
 print(max_Cnt(numArr))
