@@ -12,9 +12,14 @@ def sum(number):
 def sort_array(number):
     arg = []
     for i in range(len(number)):
-        arg.append(number[i])
+       arg.append(number[i])
     arg.reverse()
-    if arg[0] == '0':
+    arg = remove_Zero(arg)
+
+    return arg
+
+def remove_Zero(arg):
+    while arg[0] == '0':
         del arg[0]
     return arg
         
