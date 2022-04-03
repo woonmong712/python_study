@@ -1,4 +1,4 @@
 working_hours = []
 
 for i in range(5):
-    working_hours.append(int(input()))
+    start_time, end_time = input().split(",")
