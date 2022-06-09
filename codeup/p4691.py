@@ -1,6 +1,3 @@
-from re import L
-
-
 participant = int(input())
 dice_number = []
 
