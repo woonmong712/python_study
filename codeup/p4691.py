@@ -1,21 +1,7 @@
 participant = int(input())
-dice_number = []
+dice_number_array = [list(map(int, input().split()))
+                     for _ in range(participant)]
 
-for cnt in range(participant):
-    num = input().split(" ")
-    dice_number.append(num)
+print(set(dice_number_array[0]))
 
-
-def dice_rule(dicearr):
-    case = 0
-    dicearr = set(dicearr)
-    if not dicearr:
-        case = 1
-    else:
-        case = 4
-
-    return case
-
-
-for num in dice_number:
-    print(dice_rule(num))
+# def dice_num_check(dice_number):
