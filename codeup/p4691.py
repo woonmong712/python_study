@@ -20,11 +20,12 @@ def initialization_dict(dict):
 priceArray = []
 for i in range(participant):
     dice_numDic = count_number(dice_numDic, dice_number_array[i])
-    dice_numDic = dict(
-        {key: value for key, value in dice_numDic.items() if value != 0})
-    reverse_dice_numDic = dict((value, key)
-                               for (key, value) in dice_numDic.items())
-    print(reverse_dice_numDic)
+    print(dice_numDic)
+    # dice_numDic = dict(
+    #     {key: value for key, value in dice_numDic.items() if value != 0})
+    # reverse_dice_numDic = dict((value, key)
+    #                            for (key, value) in dice_numDic.items())
+    # print(reverse_dice_numDic)
     # if len(dice_numDic) == 1:
     #     dice_keys = list(dice_numDic.keys())
     #     price = 50000 + dice_keys[0] * 5000
@@ -41,5 +42,4 @@ for i in range(participant):
     #     print("test")
     # priceArray.append(price)
     dice_numDic = initialization_dict(dice_numDic)
-
-print(priceArray)
+# print(priceArray)
