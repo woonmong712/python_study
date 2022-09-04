@@ -28,18 +28,6 @@ elif last_degree < 5:
 
 print(count)
 
-
-
-
-        
-
-
-
-# elif degree%10 == 5:
-#     count += 1 # 5단위 한번 더해줌
-# elif degree%10 < 5:
-#     count += (degree%10)
-
 # 34 > 
 # 27 > 3번(+30) 누르고 3번(-1) = 6번
 # 27 > 2번(+20) 누르고, 1번(+5) , 2번 (+1) = 7번
