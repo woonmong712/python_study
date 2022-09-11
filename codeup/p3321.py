@@ -26,7 +26,5 @@ oneDollar_pizza = int(C/A)
 # 열량이 높은 순으로 토핑을 추가한다. (중복 안됨)
 for i in topping:
     bestPizza_kcal += i
-    bestPizza_price += 
-
 
 print(topping)

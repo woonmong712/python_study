@@ -19,14 +19,26 @@ for i in range(participant):
     number_dict.append(get_count(dice_number[i]))
 
 for i in number_dict:
-    for key, value in i.items():
-      if value == 4:
-        total_price = 50000 +  int(key) * 5000
-        total_price_array.append(total_price)
-        total_price = 0
-      elif value == 3:
-        total_price = 10000 + int(key) * 1000
-        total_price_array.append(total_price)
-        total_price = 0
-      print(key, value)
-    print(f"total_price = {total_price_array}")
+  if len(i) == 4:
+    total_price = int(max(i)) * 100
+    total_price_array.append(total_price)
+  elif len(i) == 3:
+    dice_num = [key for key, value in i.items() if value == 2]
+    total_price = 1000 + int(dice_num[0]) * 100
+    total_price_array.append(total_price)
+  elif len(i) == 2:
+    list_of_value = list(i.values())
+    if max(list_of_value) == 3:
+      dice_num = [key for key, value in i.items() if value == 3]
+      total_price = 10000 + int(dice_num[0]) * 1000
+      total_price_array.append(total_price)
+    if max(list_of_value) == 2:
+      dice_num = [key for key, value in i.items() if value == 2]
+      total_price = 2000 + int(dice_num[0]) * 500 + int(dice_num[1]) * 500
+      total_price_array.append(total_price)
+  elif len(i) == 1:
+    total_price = 50000 + int(max(i)) * 5000
+    total_price_array.append(total_price)
+  total_price = 0
+
+print(max(total_price_array))
