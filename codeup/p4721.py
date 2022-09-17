@@ -5,18 +5,21 @@ grade = []
 for _ in range(N):
     grade.append(list(map(int, input().split())))
 
+# print(total_grade)
+A,B,C = [],[],[]
+# 학생별 점수 ary를 만들어 준다.
+for i in range(N):
+    A.append(grade[i][0])
+    B.append(grade[i][1])
+    C.append(grade[i][2])
 
-def get_count(num_lst):
-    total_list = {}
-    for i in num_lst:
-        for key in range(3):
-            total_list[key+1] = i[key]
-    return total_list
+A.sort(reverse=True)
+B.sort(reverse=True)
+C.sort(reverse=True)
 
-
-grade_list = []
-for i in grade:
-    grade_list.append(get_count(grade))
-
-
-print(grade_list)
+maxSum_ary = [sum(A),sum(B),sum(C)]
+maxSum = max(maxSum_ary)
+cnt = 0
+for num in maxSum_ary:
+    if maxSum == num:
+        cnt += 1
