@@ -43,6 +43,7 @@
 # print(days_1.count("a"))
 # print(days_1[-1])
 
+from requests import get
 
 websites = (
     "https://google.com",
