@@ -1,11 +1,17 @@
 # 전체 인원 : K, 한 방 인원 : N , 같은 학년, 성별
 # 한번 풀고 다음에 구조체를 이용해서 풀어보도록 하기
 
+
+class student:
+    S : int = None
+    Y : int = None
+
 K,N = map(int, input().split(" "))
-student_array = []
+student_class = student()
 for student in range(K):
     S,Y = map(int, input().split(" "))
-    student_array.append([S,Y])
+    student.S = 
+
 
 def chk_sex(student_array):
     girls, boys = [], []
