@@ -10,7 +10,7 @@ K,N = map(int, input().split(" "))
 student_class = student()
 for student in range(K):
     S,Y = map(int, input().split(" "))
-    student.S = 
+    student.S = a
 
 
 def chk_sex(student_array):
