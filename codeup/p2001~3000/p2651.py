@@ -7,7 +7,6 @@ def how_to_seat(seat_status, people, count, start_index):
     if cal_seat_status(seat_status) == people:
         count += 1
         return count
-
     for i in range(start_index, len(seat_status)):
         if not seat_status[i]:
             seat_status[i] = True
